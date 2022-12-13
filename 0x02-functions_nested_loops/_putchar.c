@@ -11,4 +11,18 @@
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
+}
 
+void print_alphabet_x10(void)
+{
+	_putchar("abcdefghijklmnopqrstuvwxyz")
+	_putchar("abcdefghijklmnopqrstuvwxyz")
+	_putchar("abcdefghijklmnopqrstuvwxyz")
+	_putchar("abcdefghijklmnopqrstuvwxyz")
+	_putchar("abcdefghijklmnopqrstuvwxyz")
+	_putchar("abcdefghijklmnopqrstuvwxyz")
+	_putchar("abcdefghijklmnopqrstuvwxyz")
+	_putchar("abcdefghijklmnopqrstuvwxyz")
+	_putchar("abcdefghijklmnopqrstuvwxyz")
+	_putchar("abcdefghijklmnopqrstuvwxyz")
+}
