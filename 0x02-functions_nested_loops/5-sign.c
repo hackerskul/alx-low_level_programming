@@ -8,16 +8,16 @@
  * returns -1 and prints - if n is less than zero
  */
 
-int print_sign(int n);
+int print_sign(int n)
 {
 	if (n > 0)
 	{
-		_putchar("+");
+		_putchar('+');
 		return (1);
 	}
 	else if (n == 0)
 	{
-		_putchar(0);
+		_putchar('0');
 		return (0);
 	}
 	else
