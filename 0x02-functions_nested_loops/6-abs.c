@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _abs - computes the abs value of an int
- * @n: the int to be checked
+ * _abs - computes the abs value of an int variable
+ * @n: is the variable with the value to be checked
  *
- * Return: the absolute value of the int
+ * Return: returns
  */
 
 int _abs(int n)

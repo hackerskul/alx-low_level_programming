@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * jack_bauer - time shit
+ * jack_bauer - time of jack
  * Return: always 0
  *
  */

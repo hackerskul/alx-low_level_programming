@@ -1,0 +1,19 @@
+#include "main.h"
+/**
+ *
+ *
+ *
+ *
+ */
+
+void rimes_table(void)
+{
+	int x, y;
+	int z = 0;
+
+	for (x = 0; x <= 10; x++)
+	{
+		z = y * x;
+		
+	}
+}
