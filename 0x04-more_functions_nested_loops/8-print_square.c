@@ -1,0 +1,20 @@
+#include "main.h"
+/*
+ * print_square - function prints a square
+ * @size: the width and lenght
+ * Return: square '#'
+ */
+void print_square(int size)
+{
+	int len, wid;
+
+	for (len = 0; len < size; len++)
+	{
+		_putchar('#');
+		for (wid = 0; wid <= size; wid++)
+		{
+			_putchar('#');
+		}
+	_putchar('\n');
+	}
+}
