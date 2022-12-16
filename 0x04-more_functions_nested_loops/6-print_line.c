@@ -1,12 +1,16 @@
 #include "main.h"
+
 /**
- * print_line-draws a line
- * @n:the param
- * Return:void
+ * print_line - printing lines
+ * @n: number of times
+ * Return: void
  */
+
 void print_line(int n)
 {
-	if (n > 0)
+	int i;
+
+	for (i = 0; i < n; i++)
 	{
 		_putchar('_');
 	}
