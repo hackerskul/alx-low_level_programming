@@ -2,6 +2,7 @@
 
 /**
  * print_numbers - print numbers 0 to 9
+ * main - main
  * @: unknown function
  * Return: void
  */
