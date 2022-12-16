@@ -17,14 +17,14 @@ for (i = 1; f < 100; i++)
 if (i == 100)
 printf("%s", b);
 else if ((i % 3 == 0) && (i % 5 == 0))
-printf("%s", fb);
+_putchar("%s", fb);
 else if (i % 3 == 0)
-printf("%s", f);
+_putchar("%s", f);
 else if (i % 5 == 0)
-printf("%s", b);
+_putchar("%s", b);
 else
-printf("%d", i);
+_putchar("%d", i);
 }
-printf("\n");
+_putchar("\n");
 return (0);
 }
