@@ -1,6 +1,6 @@
 #include "main.h"
 /*
- * print_square - function prints a square
+ * print_square-prints a square
  * @size: the width and lenght
  * Return: square '#'
  */
@@ -11,7 +11,7 @@ void print_square(int size)
 	for (len = 0; len < size; len++)
 	{
 		_putchar('#');
-		for (wid = 0; wid <= size; wid++)
+		for (wid = 2; wid <= size; wid++)
 		{
 			_putchar('#');
 		}
