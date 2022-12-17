@@ -1,9 +1,7 @@
 #include <stdio.h>
-/**
- *
+/*
  * main - prints largest prime nmbr
  * Return: 0
- *
  */
 int main(void)
 {
