@@ -1,9 +1,9 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- *leet - changes the chars "aA" "eE" "oO" "tT" "lL" into 4 3 0 7 1 respectively
+ *leet - changes "aA" "eE" "oO" "tT" "lL" to 4 3 0 7 1
  *
- *@s: the pointer containing the string
+ *@s: the pointer 
  *
  *Return: the string already converted
  */

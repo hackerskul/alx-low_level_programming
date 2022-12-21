@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  *string_toupper - changes the char in a string from lower to uppercase

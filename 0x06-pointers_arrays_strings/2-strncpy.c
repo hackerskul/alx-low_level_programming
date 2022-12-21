@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  **_strncpy - copies the string from a pointer to another n bytes long

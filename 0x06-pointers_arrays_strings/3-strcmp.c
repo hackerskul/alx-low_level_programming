@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  **_strcmp - compares two strings and tells whether they are greater than, less

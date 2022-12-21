@@ -1,23 +1,23 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- **_strcat - concatenates the string from a pointer to another
+ **_strcat - string from a pointer to another
  *
- *@src: pointer that has the string to be concatenated
- *@dest: pointer that will have its string concatenated with the other
+ *@src: pointer that has the string to be joined
+ *@des: pointer that will have its string joined with the other
  *
- *Return: strings concatenated to dest
+ *Return: strings joined to dest
  */
-char *_strcat(char *dest, char *src)
+char *_strcat(char *des, char *src)
 {
 	int i, j;
 
-	for (i = 0; dest[i] != 0; i++)
+	for (i = 0; des[i] != 0; i++)
 	{
 	}
 	for (j = 0; src[j] != 0; j++, i++)
 	{
-		dest[i] = src[j];
+		des[i] = src[j];
 	}
-	return (dest);
+	return (des);
 }

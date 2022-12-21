@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  **_strncat - concatenates the string from a pointer to another
