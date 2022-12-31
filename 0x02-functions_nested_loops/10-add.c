@@ -2,8 +2,8 @@
 
 /**
  * add - add two variables.
- * @val1: the first number.
- * @val2: seconf nmbr.
+ * @val: the first number.
+ * @val2: second nmbr.
  *
  * Return: The result of the addition.
  */
