@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  *sqrt_recursion - calculates the square root
  *@n: integer for the nmbr
