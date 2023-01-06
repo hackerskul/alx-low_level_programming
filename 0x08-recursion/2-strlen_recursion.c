@@ -2,18 +2,16 @@
 /**
  *_strlen_recursion - prints the length of a string
  *@s: is the pointer to the string
- *@i: the counting var
  *return: the value of i
  *Return: the function
  */
 
-int _strlen_recursion(char *s, int i)
+int _strlen_recursion(char *s)
 {
-	if (*s != 0)
+	if (*s == 0)
 	{
-		_strlen_recursion(s + 1, i + 1);
-		++i;
+		return (0);
 	}
-	return (i);
+	return (1 + _strlen_recursion(s + 1));
 
 }
