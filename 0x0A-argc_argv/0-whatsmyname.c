@@ -8,8 +8,8 @@
  * Return: returns 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc __attribute__((unudes)), char *argv[])
 {
-	printf("%s", argv[0]);
+	_putchar("%s", argv[0]);
 	return (0);
 }
