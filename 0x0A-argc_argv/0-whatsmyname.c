@@ -10,6 +10,6 @@
 
 int main(int argc __attribute__((unudes)), char *argv[])
 {
-	_putchar("%s", argv[0]);
+	_putchar(argv[0]);
 	return (0);
 }
