@@ -11,5 +11,6 @@
 int main(int argc __attribute__((unudes)), char *argv[])
 {
 	_putchar(argv[0]);
+	_putchar("\n");
 	return (0);
 }
