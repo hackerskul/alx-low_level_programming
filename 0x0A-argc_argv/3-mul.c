@@ -1,47 +1,22 @@
 #include "main.h"
 
 /**
- * main - Entry point of program.
- * @argc: Number of arguments passed to program.
- * @argv: Array of arguments passed to program.
+ * main - entry point
+ * @argc: number of arguments passed
+ * @argv: array of arguments passed
  *
- * Return: 0 on success, 1 on failure.
+ * Return: 0 on success, 1 on error
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
-
 	if (argc != 3)
 	{
-		printf("Error\n");
+		puts("Error");
 		return (1);
 	}
-
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-	result = multiply_numbers(num1, num2);
-	print_result(result);
-
-	return (0);
-}
-
-/**
- * multiply_numbers - Multiply two numbers.
- * @num1: First number to multiply.
- * @num2: Second number to multiply.
- *
- * Return: Result of multiplication.
- */
-int multiply_numbers(int num1, int num2)
-{
-	return (num1 * num2);
-}
-
-/**
- * print_result - Print result of multiplication.
- * @result: Result of multiplication.
- */
-void print_result(int result)
-{
+	int num1 = atoi(argv[1]);
+	int num2 = atoi(argv[2]);
+	int result = num1 * num2;
 	printf("%d\n", result);
+	return (0);
 }
