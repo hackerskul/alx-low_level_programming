@@ -1,5 +1,5 @@
-#ifndef HEADER_FILE_H
-#define HEADER_FILE_H
+#ifndef DOG_H
+#define DOG_H
 
 /**
  * struct dog - a structure to represent a dog
@@ -11,7 +11,7 @@
 struct dog
 {
 	char *name;
-	float *age;
+	float age;
 	char *owner;
 };
 
