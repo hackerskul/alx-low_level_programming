@@ -1,4 +1,5 @@
 #include <stdlib>
+#include <stdio.h>
 #include "dog.h"
 /**
  * print_dog - print the members of a dog structure instance
