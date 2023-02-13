@@ -3,12 +3,12 @@
 #include <string.h>
 
 /**
- *binary_to_unit - function to count binary nmbrs
+ *binary_to_uint - function to count binary nmbrs
  *@b: pointer to the string of binary
  *Return: returns
  */
 
-unsigned int binary_to_unit(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	unsigned int nmbr = 0;
 	int power = 0;
