@@ -20,7 +20,7 @@ void print_times_table(int n)
             }
             else
             {
-                printf(" %3d,", product);
+                printf(" %3d", product);
             }
         }
         printf("\n");
