@@ -16,11 +16,11 @@ void print_times_table(int n)
             int product = i * j;
             if (j == 0)
             {
-                printf("%d,", product);
+                printf("%d", product);
             }
             else
             {
-                printf(" %3d", product);
+                printf(" %3d,", product);
             }
         }
         printf("\n");
