@@ -1,22 +1,25 @@
-#include <stdio.h>
-
-/**
-* main - prints all combinations of string digits
-* Return: always 0
-*/
 int main(void)
 {
+    int i, j, k;
 
-	int n;
+    for (i = 0; i < 8; i++)
+    {
+        for (j = i + 1; j < 9; j++)
+        {
+            for (k = j + 1; k < 10; k++)
+            {
+                putchar(i + '0');
+                putchar(j + '0');
+                putchar(k + '0');
 
-	for (n = 48; n < 58; n++)
+                if (i != 7 || j != 8 || k != 9)
+                {
+                    putchar(',');
+                    putchar(' ');
+                }
+            }
+        }
+    }
 
-		putchar(n);
-		if (n != 57)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-	putchar('\n');
-	return (0);
+    return 0;
 }
