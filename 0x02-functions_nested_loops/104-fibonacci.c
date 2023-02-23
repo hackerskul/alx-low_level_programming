@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+void print_fibonacci(void);
+
+int main(void)
+{
+    print_fibonacci();
+    return 0;
+}
+
 void print_fibonacci(void)
 {
     int i;
