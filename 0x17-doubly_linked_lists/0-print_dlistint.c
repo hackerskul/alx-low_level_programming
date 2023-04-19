@@ -1,3 +1,4 @@
+#include "lists.h"
 #include <stdio.h>
 /**
  *print_dlistint - is a func for printing total nodes
