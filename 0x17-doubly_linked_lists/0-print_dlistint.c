@@ -7,7 +7,7 @@
  */
 size_t print_dlistint(const dlistint *h)
 {
-	size_t nmbr;
+	size_t i;
 
 	for (i = 0; h != Null; i++)
 	{
