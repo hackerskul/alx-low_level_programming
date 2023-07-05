@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 
-/*
+/**
  *_strlen_recursion - function that returns an int
- *Return: increment 
+ *Return: increment
  *@s: pointer variable
  *return: returns i
  */
