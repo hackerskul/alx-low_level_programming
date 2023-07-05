@@ -5,7 +5,6 @@
  *factorial - returns the factorial
  *@n: is the variable
  *return: retiurns the factoeial
- *
  */
 
 int factorial(int n)
