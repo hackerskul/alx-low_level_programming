@@ -6,7 +6,7 @@
  *@n: is the variable
  *return: retiurns the factoeial
  *return: negative
- *return: nun
+ *Return: nun
  */
 
 int factorial(int n)
