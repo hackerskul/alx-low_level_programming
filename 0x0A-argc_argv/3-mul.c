@@ -8,11 +8,17 @@
  * Return: ncdj
  */
 
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
-	int x = atoi(argv[1]);
+	int x,y;
 
-	int y = atoi(argv[2]);
+	if (argc < 3) {
+		printf("Error");
+		return (1);
+	}
+
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
 
 	printf("%d", x * y);
 
