@@ -1,6 +1,6 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
 
-#define SIZE 1024
+#define SUM(x, y) ((x) + (y))
 
 #endif
