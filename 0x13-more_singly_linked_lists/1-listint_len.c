@@ -7,8 +7,8 @@
  */
 size_t listint_len(const listint_t *h)
 {
-	listint_t current = head;
-	int i = 0;
+	const listint_t *current = h;
+	size_t i = 0;
 
 	if (h == NULL)
 	{
