@@ -1,50 +1,33 @@
-#include"main.h"
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
- *str_concat - concatenates two strings
- *
- *@s1: first string
- *@s2: second string
- *
- *Return: a pointer to the concatenated string or NULL if the process fails
+ * str_concat - Concatenates two strings
+ * @s1: The first string to be concatenated.
+ * @s2: The second string to be concatenated.
+ * Return: On success, returns a pointer
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *ptr;
-	int i, j, i_s1, j_s2;
+	size_t len_s1, len_s2, total_len;
+	char *result;
 
-	if (s1 == 0)
-	{
+	if (s1 == NULL)
 		s1 = "";
-	}
-	for (i = 0; s1[i] != 0; i++)
-	{
-	}
-	if (s2 == 0)
-	{
+	if (s2 == NULL)
 		s2 = "";
-	}
-	for (j = 0; s2[j] != 0; i++)
-	{
-	}
 
-	ptr = malloc(sizeof(char) * (i + j + 1));
+	len_s1 = strlen(s1);
+	len_s2 = strlen(s2);
+	total_len = len_s1 + len_s2 + 1;
 
-	if (ptr == 0)
-	{
-		return (0);
-	}
+	result = (char *)malloc(total_len * sizeof(char));
+	if (result == NULL)
+		return (NULL);
 
-	for (i_s1 = 0; i_s1 < i; i_s1++)
-	{
-		ptr[i_s1] = s1[i_s1];
-	}
-	for (j_s2 = 0; j_s2 < j; j_s2++)
-	{
-		ptr[i_s1] = s2[j_s2];
-	}
-	ptr[i_s1] = 0;
-	return (ptr);
+	strcpy(result, s1);
+	strcat(result + len_s1, s2);
+
+	return (result);
 }
