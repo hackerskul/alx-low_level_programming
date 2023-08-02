@@ -9,7 +9,7 @@
  */
 int wildcmp(char *s1, char *s2)
 {
-	/* If both strings are empty, they are considered identical */
+	/* Base case: both strings are empty, considered identical */
 	if (*s1 == '\0' && *s2 == '\0')
 		return (1);
 
@@ -17,15 +17,12 @@ int wildcmp(char *s1, char *s2)
 	if (*s1 == *s2)
 		return (wildcmp(s1 + 1, s2 + 1));
 
+	/* If the special character '*' is encountered in s2 */
 	if (*s2 == '*')
 	{
-		/* Skip the consecutive '*' characters in s2 */
-		while (*(s2 + 1) == '*')
-			s2++;
-
-		if (*s1 == *(s2 + 1))
-			return (wildcmp(s1, s2 + 2) || wildcmp(s1 + 1, s2));
+		if (*(s2 + 1) == '\0' || (*s1 != '\0' && wildcmp(s1 + 1, s2)))
+			return (1);
 	}
 
-	return (0); /* If no matches are found, the strings are not identical */
+	return (0);
 }
