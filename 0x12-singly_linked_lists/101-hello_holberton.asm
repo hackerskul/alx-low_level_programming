@@ -1,31 +1,20 @@
 section .data
-    hello_message db "Hello, Holberton,", 0
-    format db "%s", 10, 0  ; "%s" is the format specifier for a string, 10 is the ASCII code for a newline, and 0 is the null terminator
+    hello_message db "Hello, Holberton!", 10    ; 10 is the ASCII code for newline
+    hello_len equ $ - hello_message           ; Calculate the length of the message
 
 section .text
-    global _start
+global main
 
-_start:
-    ; Set up the stack pointer (required by C library functions)
-    mov rdi, rsp
-
-    ; Call printf with the hello_message string as the argument
-    mov rsi, hello_message
-    mov rax, 0   ; RAX = 0 to indicate printf
-    call printf
-
-    ; Exit the program
-    mov rax, 60   ; RAX = 60 to indicate exit system call
-    xor rdi, rdi  ; RDI = 0 to indicate success exit code
+main:
+    ; Write "Hello, Holberton!" to standard output
+    mov rax, 1                  ; syscall number for sys_write
+    mov rdi, 1                  ; file descriptor 1 (stdout)
+    mov rsi, hello_message      ; pointer to the message to print
+    mov rdx, hello_len         ; length of the message
     syscall
 
-section .bss
-    ; Reserve space to hold the return value of printf
-    output resq 1
-
-extern printf
-
-section .data
-    hello_message db "Hello, Holberton,", 0
-    format db "%s", 10, 0  ; "%s" is the format specifier for a string, 10 is the ASCII code for a newline, and 0 is the null terminator
-
+    ; Exit the program
+    mov rax, 60                 ; syscall number for sys_exit
+    xor rdi, rdi                ; exit status 0
+    syscall
+section .note.GNU-stack noalloc noexec nowrite progbits
