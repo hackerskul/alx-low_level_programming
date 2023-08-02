@@ -13,7 +13,7 @@ int _strlen(char *s)
 }
 
 /**
- * is_palindrome_recursive - Recursive helper function to check if a string is a palindrome.
+ * is_palindrome_recursive - Recursive helper
  *
  * @s: The input string to check.
  * @start: The starting index of the substring to check.
@@ -29,7 +29,7 @@ int is_palindrome_recursive(char *s, int start, int end)
 	if (s[start] != s[end])
 		return (0);
 
-	return is_palindrome_recursive(s, start + 1, end - 1);
+	return (is_palindrome_recursive(s, start + 1, end - 1));
 }
 
 /**
@@ -43,5 +43,5 @@ int is_palindrome(char *s)
 {
 	int len = _strlen(s);
 
-	return is_palindrome_recursive(s, 0, len - 1);
+	return (is_palindrome_recursive(s, 0, len - 1));
 }
