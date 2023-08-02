@@ -1,4 +1,18 @@
 /**
+ * _strlen - Calculate the length of a string recursively.
+ *
+ * @s: The input string.
+ *
+ * Return: The length of the string.
+ */
+int _strlen(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen(s + 1));
+}
+
+/**
  * is_palindrome_recursive - Recursive helper function to check if a string is a palindrome.
  *
  * @s: The input string to check.
@@ -27,11 +41,7 @@ int is_palindrome_recursive(char *s, int start, int end)
  */
 int is_palindrome(char *s)
 {
-	int len = 0;
-
-	/* Calculate the length of the string */
-	while (s[len] != '\0')
-		len++;
+	int len = _strlen(s);
 
 	return is_palindrome_recursive(s, 0, len - 1);
 }
