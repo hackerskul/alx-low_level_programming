@@ -7,8 +7,8 @@ global main
 
 main:
     ; Write "Hello, Holberton!" to standard output
-    mov rax, 1                  ; syscall number for sys_write
     mov rdi, 1                  ; file descriptor 1 (stdout)
+    mov rax, 1                  ; syscall number for sys_write
     mov rsi, hello_message      ; pointer to the message to print
     mov rdx, hello_len         ; length of the message
     syscall
@@ -18,3 +18,4 @@ main:
     xor rdi, rdi                ; exit status 0
     syscall
 section .note.GNU-stack noalloc noexec nowrite progbits
+
