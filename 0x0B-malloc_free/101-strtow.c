@@ -23,11 +23,10 @@
 char **strtow(char *str)
 {
 	int i, j, k, len, word_count;
+	char **words;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-
-	char **words;
 
 	word_count = 0;
 	len = 0;
