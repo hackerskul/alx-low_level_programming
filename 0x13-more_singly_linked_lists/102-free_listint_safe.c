@@ -1,58 +1,40 @@
-#include "lists.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include "lists.h"
 
 /**
- * free_listint_safe - Frees a listint_t linked list safely.
- * @h: Pointer to a pointer to the head node of the list.
+ * free_listint_safe - Frees a listint_t list safely.
+ *
+ * @h: A pointer to the head of the list.
  *
  * Return: The size of the list that was freed.
  */
 size_t free_listint_safe(listint_t **h)
 {
-    listint_t *slow, *fast;
-    size_t count = 0;
+	if (h == NULL || *h == NULL)
+		return (0);
 
-    if (h == NULL || *h == NULL)
-        return 0;
+	size_t size = 0;
+	listint_t *current, *next;
 
-    slow = *h;
-    fast = (*h)->next;
+	current = *h;
 
-    while (slow && fast && fast->next)
-    {
-        if (slow == fast)
-        {
-            /* Loop detected, break the loop */
-            slow = *h;
-            while (slow != fast->next)
-            {
-                count++;
-                slow = slow->next;
-                fast = fast->next;
-            }
-            count++; /* Count the last node inside the loop */
-            while (fast->next != slow)
-            {
-                count++;
-                fast = fast->next;
-            }
-            break;
-        }
-        slow = slow->next;
-        fast = fast->next->next;
-    }
+	while (current != NULL)
+	{
+		next = current->next;
+		free(current);
+		size++;
 
-    /* No loop, simply free the list and set head to NULL */
-    slow = *h;
-    while (slow)
-    {
-        listint_t *temp = slow;
-        slow = slow->next;
-        free(temp);
-        count++;
-    }
+		if ((void *)next >= (void *)current)
+		{
+			printf("Infinite loop detected, list is not freed entirely.\n");
+			*h = NULL;
+			return (size);
+		}
 
-    *h = NULL; /* Set head to NULL after freeing the list */
+		current = next;
+	}
 
-    return count;
+	*h = NULL;
+	return (size);
 }

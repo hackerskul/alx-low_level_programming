@@ -1,41 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[]) {
-    int cents, numCoins;	
-    if (argc != 2) {
-        printf("Error\n");
-        return 1;
-    }
+/**
+ * main - Calculates the minimum number of coins for change
+ *
+ * @argc: The number of command-line arguments (should be 2).
+ * @argv: The second argument (argv[1])
+ *        represents the amount of money in cents.
+ *
+ * Return: successful returns 0. arguments not exactly 1,
+ *         prints "error" and returns 1 if negative
+ *         prints 0 and returns 0.
+ */
+int main(int argc, char *argv[])
+{
+	int coins[] = {25, 10, 5, 2, 1};
+	int numCoins = 0;
+	int i;
+	int cents;
 
-    cents = atoi(argv[1]);
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
 
-    if (cents < 0) {
-        printf("0\n");
-        return 0;
-    }
+	cents = atoi(argv[1]);
 
-    numCoins = 0;
-    
-    while (cents > 0) {
-        if (cents >= 25) {
-            cents -= 25;
-            numCoins++;
-        } else if (cents >= 10) {
-            cents -= 10;
-            numCoins++;
-        } else if (cents >= 5) {
-            cents -= 5;
-            numCoins++;
-        } else if (cents >= 2) {
-            cents -= 2;
-            numCoins++;
-        } else if (cents >= 1) {
-            cents -= 1;
-            numCoins++;
-        }
-    }
+	if (cents < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 
-    printf("%d\n", numCoins);
-    return 0;
+	for (i = 0; i < 5; i++)
+	{
+		numCoins += cents / coins[i];
+		cents %= coins[i];
+	}
+
+	printf("%d\n", numCoins);
+	return (0);
 }
+
