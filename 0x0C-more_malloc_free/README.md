@@ -1,1 +1,0 @@
-# This directory is for continuing practicing with _malloc and free_
