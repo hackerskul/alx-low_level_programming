@@ -1,5 +1,26 @@
-#include "binary.h"
-#include <stdio.h>
+#include "holberton.h"
+
+/**
+ *_pow - returns the value of x raised to the y
+ *
+ *@x: base number
+ *@y: exponent
+ *
+ *Return: @x to the @y, if @y < 0 return -1
+ */
+int _pow(int x, int y)
+{
+	if (y == 0)
+	{
+		return (1);
+	}
+	if (y < 0)
+	{
+		return (-1);
+	}
+	return (x * _pow(x, y - 1));
+}
+
 /**
  *binary_to_uint - converts a binary number to an unsigned int
  *@b: string containing the binary number
@@ -8,22 +29,21 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int result;
-	int i;
+	unsigned int num = 0;
+	int i, j;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
-
-	for(i = 0; i != '\0'; i++)
+	for (i = 0; b[i]; i++)
 	{
-		if(b[i] == '0')
-			result = result << 1;
-		else if(b[i] == '1')
-			result = (result << 1) | 1;
-		else
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 	}
-
-	return (result);
-
+	i--;
+	for (j = 0; i >= 0; i--, j++)
+	{
+		if (b[i] == '1')
+			num += _pow(2, j);
+	}
+	return (num);
 }
